@@ -1,2 +1,3 @@
 # FAU_DeepLearning
-This project involves bla bla bla
+This project involves bla bla bla (to do)
+
