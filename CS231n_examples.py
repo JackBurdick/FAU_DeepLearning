@@ -1,4 +1,4 @@
-# Example 1: 
+# Example 1:
 # Lets generate a classification dataset that is not easily linearly separable: spiral dataset
 
 # A bit of setup
@@ -46,14 +46,14 @@ reg = 1e-3 # regularization strength
 # gradient descent loop
 num_examples = X.shape[0]
 for i in xrange(200):
-  
+
   # evaluate class scores, [N x K]
-  scores = np.dot(X, W) + b 
-  
+  scores = np.dot(X, W) + b
+
   # compute the class probabilities
   exp_scores = np.exp(scores)
   probs = exp_scores / np.sum(exp_scores, axis=1, keepdims=True) # [N x K]
-  
+
   # compute the loss: average cross-entropy loss and regularization
   corect_logprobs = -np.log(probs[range(num_examples),y])
   data_loss = np.sum(corect_logprobs)/num_examples
@@ -61,22 +61,22 @@ for i in xrange(200):
   loss = data_loss + reg_loss
   if i % 10 == 0:
     print "iteration %d: loss %f" % (i, loss)
-  
+
   # compute the gradient on scores
   dscores = probs
   dscores[range(num_examples),y] -= 1
   dscores /= num_examples
-  
+
   # backpropate the gradient to the parameters (W,b)
   dW = np.dot(X.T, dscores)
   db = np.sum(dscores, axis=0, keepdims=True)
-  
+
   dW += reg*W # regularization gradient
-  
+
   # perform a parameter update
   W += -step_size * dW
   b += -step_size * db
-  
+
   # evaluate training set accuracy
 scores = np.dot(X, W) + b
 predicted_class = np.argmax(scores, axis=1)
@@ -112,15 +112,15 @@ reg = 1e-3 # regularization strength
 # gradient descent loop
 num_examples = X.shape[0]
 for i in xrange(10000):
-  
+
   # evaluate class scores, [N x K]
   hidden_layer = np.maximum(0, np.dot(X, W) + b) # note, ReLU activation
   scores = np.dot(hidden_layer, W2) + b2
-  
+
   # compute the class probabilities
   exp_scores = np.exp(scores)
   probs = exp_scores / np.sum(exp_scores, axis=1, keepdims=True) # [N x K]
-  
+
   # compute the loss: average cross-entropy loss and regularization
   corect_logprobs = -np.log(probs[range(num_examples),y])
   data_loss = np.sum(corect_logprobs)/num_examples
@@ -128,12 +128,12 @@ for i in xrange(10000):
   loss = data_loss + reg_loss
   if i % 1000 == 0:
     print "iteration %d: loss %f" % (i, loss)
-  
+
   # compute the gradient on scores
   dscores = probs
   dscores[range(num_examples),y] -= 1
   dscores /= num_examples
-  
+
   # backpropate the gradient to the parameters
   # first backprop into parameters W2 and b2
   dW2 = np.dot(hidden_layer.T, dscores)
@@ -145,17 +145,17 @@ for i in xrange(10000):
   # finally into W,b
   dW = np.dot(X.T, dhidden)
   db = np.sum(dhidden, axis=0, keepdims=True)
-  
+
   # add regularization gradient contribution
   dW2 += reg * W2
   dW += reg * W
-  
+
   # perform a parameter update
   W += -step_size * dW
   b += -step_size * db
   W2 += -step_size * dW2
   b2 += -step_size * db2
-  
+
   # evaluate training set accuracy
 hidden_layer = np.maximum(0, np.dot(X, W) + b)
 scores = np.dot(hidden_layer, W2) + b2
