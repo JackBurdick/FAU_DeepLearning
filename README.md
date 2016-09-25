@@ -8,5 +8,8 @@
 
 <b>Proposed procedure</b>: In this work we propose to advance the state of the art in two significant ways: (i) by designing, implementing, and testing intelligent solutions that use macroscopic (i.e., non-dermoscopic) images as input; and (ii) by extending the use of DNNs to the skin lesion segmentation problem. The motivation for (i) is due to dermatologists’ (and their assistants’) routine use of conventional cameras to take images of patients’ lesions using conventional cameras, a method that is less costly than the alternative -- dermoscopy -- which requires specialized equipment (Argenziano & Soyer, 2001). There is a large and ever growing amount of image data that can be used for training and testing our methods. The use of DNNs for the problem outlined in (ii) would represent a novel way of approaching the skin lesion segmentation problem from a machine learning viewpoint, in which DNNs would be used to learn which pixels belong (or not) to the region of interest (i.e., the lesion) within the image. In summary, the intended purpose of the proposed research is to design a proof-of-concept solution to automatically segment and classify macroscopic images of pigmented skin lesions.
 
+<b>Setting up the programing environment</b>:
+1. Create a separate Python virtual environment
+
 
 
