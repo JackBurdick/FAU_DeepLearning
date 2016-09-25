@@ -27,7 +27,7 @@ Install virtualenv via pip:
 ```
 $ pip install virtualenv
 ```
-1. Create a virtual environment for a project:
+- Create a virtual environment for a project
 ```
 $ cd my_project_folder
 $ virtualenv venv
@@ -42,15 +42,13 @@ $ export WORKON_HOME=~/Envs
 $ source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-2. Create a virtual environment:
+- Create a virtual environment:
 ```
 $ mkvirtualenv fau-keras
 ```
 This will create a Python virtual environment named **fau-keras** . This creates the *fau-keras* folder inside ~/Envs.
 
-Work on a virtual environment:
-
-3. Work on a virtual environment:
+- Work on a virtual environment:
 If we want to access this virtual environment, just use the **workon**  command followed by the name of the virtual environment:
 ```
 $ workon <virtual env name>
@@ -59,11 +57,11 @@ In this case, we can access the keras virtual environment by executing the follo
 ```
 $ workon fau-keras
 ```
-4. Deactivating the virtual environment:
+- Deactivating the virtual environment:
 ```
 $ deactivate
 ```
-5. To delete:
+- To delete:
 ```
 $ rmvirtualenv venv
 ```
