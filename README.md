@@ -1,6 +1,6 @@
 # Skin Lessions Classification using Convolutional Neural Networks
-<b>Authors</b>:  Adria Romero López, Jack Burdick, Janet Weinthal, Adam Lovett <br>
-<b>Advisor</b>:  Professor Oge Marques 
+<b>Authors</b>:  Jack Burdick, Adrià Romero López, Janet Weinthal, Adam Lovett <br>
+<b>Advisor</b>:  Dr Oge Marques 
 
 ##Setting up the programming environment:<br>
 
@@ -100,14 +100,14 @@ $ pip install keras
 
 ###Step 5. Test out the installation
 To verify that Keras has been installed, access the keras virtual environment, open up a Python shell, and import it:
-
+```
 $ workon keras
 $ python
 >>> import keras
-
+```
 ###Common errors:
-- (In OS X) Check you have  **Xcode** installed (Theano will need **g++ compiler** that its installed with Xcode)
+- (In OS X) Check you have  **Xcode** installed (Theano will need **g++ compiler** that its installed with Xcode).<br>
 
-Author: @Adrian (Contact me if you find some errors/doubts: adriaromero@me.com).
+Author: @Adrian (Contact me if you find some errors/doubts: adriaromero@me.com).<br>
 References:  [Installing Keras for deep learning] (http://www.pyimagesearch.com/2016/07/18/installing-keras-for-deep-learning/)
 
