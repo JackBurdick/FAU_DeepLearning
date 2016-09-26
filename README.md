@@ -4,8 +4,8 @@
 
 ##Setting up the programming environment:<br>
 
-###1. Installing Python 2.7 in our computer
-*(Jump to  point 2 if your computer has already Python 2.7 installed)*
+###Step 1. Installing Python 2.7 in our computer
+*(Jump to  step 2 if your computer has already Python 2.7 installed)*
 
 In order to install Python in our machine, we will need first to install *Homebrew*:
 ```
@@ -20,7 +20,7 @@ Now, we can install Python 2.7:
 $ brew install python
 ```
 
-###2. Create a separate Python virtual environment
+###Step 2. Create a separate Python virtual environment
 We are going to create a virtual environment exclusively for Keras-based projects to avoid problems related to conflicting library versions. <br>
 
 Install virtualenv via pip:
@@ -75,4 +75,39 @@ lsvirtualenv
 ```
 lssitepackages
 ```
+###Step 3. Install Keras
+*(For step 3 we must be  working on the virtual environment).*
+First, we need to install a few dependencies:
+```
+$ pip install numpy scipy
+$ pip install scikit-learn
+$ pip install pillow
+$ pip install h5py
+```
+We also need to install Theano:
+```
+$ pip install Theano
+$ sudo pip install --upgrade theano
+$ theano-cache clear
+```
+Now we can install **Keras**:
+```
+$ pip install keras
+```
+
+###Step 4. Setup GPU support (once we have access to the HPC)
+(to be completed)
+
+###Step 5. Test out the installation
+To verify that Keras has been installed, access the keras virtual environment, open up a Python shell, and import it:
+
+$ workon keras
+$ python
+>>> import keras
+
+###Common errors:
+- (In OS X) Check you have  **Xcode** installed (Theano will need **g++ compiler** that its installed with Xcode)
+
+Author: @Adrian (Contact me if you find some errors/doubts: adriaromero@me.com).
+References:  [Installing Keras for deep learning] (http://www.pyimagesearch.com/2016/07/18/installing-keras-for-deep-learning/)
 
