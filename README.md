@@ -1,4 +1,4 @@
-# Skin Lessions Classification using Convolutional Neural Networks
+# Skin Lesions Classification using Convolutional Neural Networks
 <b>Authors</b>:  Jack Burdick, Adrià Romero López, Janet Weinthal, Adam Lovett <br>
 <b>Advisor</b>:  Dr Oge Marques 
 
