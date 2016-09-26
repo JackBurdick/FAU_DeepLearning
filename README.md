@@ -105,6 +105,9 @@ $ workon keras
 $ python
 >>> import keras
 ```
+
+A message *"Using Theano backend."* should appear at the terminal.
+
 ###Common errors:
 - (In OS X) Check you have  **Xcode** installed (Theano will need **g++ compiler** that its installed with Xcode).<br>
 
