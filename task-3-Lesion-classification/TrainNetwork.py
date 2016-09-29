@@ -53,9 +53,9 @@ def loadImageData(path, label):
 
 # Define the paths as globs for the training sets
 path_mm_test = '/Users/AdriaRomeroLopez/Desktop/data/malignant/test/*.BMP'
-path_mm_train = '/Users/AdriaRomeroLopez/Desktop/data//data/malignant/train/*.BMP'
-path_nz_train = '/Users/AdriaRomeroLopez/Desktop/data//data/benign/train/*.BMP'
-path_nz_test = '/Users/AdriaRomeroLopez/Desktop/data//data/benign/test/*.BMP'
+path_mm_train = '/Users/AdriaRomeroLopez/Desktop/data/data/malignant/train/*.BMP'
+path_nz_train = '/Users/AdriaRomeroLopez/Desktop/data/data/benign/train/*.BMP'
+path_nz_test = '/Users/AdriaRomeroLopez/Desktop/data/data/benign/test/*.BMP'
 
 # Fetch the data and format it into Theano compatible matrices using the helper function above.
 X_nz_train, y_nz_train = loadImageData(path_nz_train, 0)
